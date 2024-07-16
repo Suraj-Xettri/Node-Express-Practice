@@ -22,4 +22,11 @@ app.get("/", function (req, res) {
   
 });
 
+app.post("/create", function (req, res) {
+  fs.writeFile(`./files/${req.body.task.split(" ").join("")}.txt`, req.body.desc, function(err){
+    res.redirect("/")
+  })
+
+});
+
 app.listen(3000);

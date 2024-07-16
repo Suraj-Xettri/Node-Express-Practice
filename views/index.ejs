@@ -10,7 +10,7 @@
     <div class="container w-screen flex flex-col items-center w-1/4 gap-5 p-8">
       <div class="bg-white shadow-md rounded-lg w-[400px] p-6">
         <div class="form">
-          <form action="">
+          <form action="/create" method="post">
             <div class="mb-4">
               <label for="taskName" class="block text-gray-700 font-bold mb-2"
                 >Task Name</label
@@ -19,6 +19,7 @@
                 type="text"
                 id="taskName"
                 placeholder="Task Name"
+                name="task"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -31,13 +32,14 @@
               <textarea
                 id="taskDescription"
                 placeholder="Task Description"
+                name="desc"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               ></textarea>
             </div>
             <div class="flex items-center justify-between">
               <button
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="button"
+                type="submit"
               >
                 Add Task
               </button>
