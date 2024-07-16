@@ -16,7 +16,10 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname,"public")))
 
 app.get("/", function (req, res) {
-  res.render("index");
+  fs.readdir(`./files`, function(err,file){
+    res.render("index", {file: file});
+  })
+  
 });
 
 app.listen(3000);
