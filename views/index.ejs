@@ -52,7 +52,7 @@
         <div
           class="card flex flex-col gap-4 border min-w-[200px] bg-zinc-800 rounded-2xl p-5"
         >
-          <div class="flex w-full justify-between items-center">
+          <div class="flex w-full justify-between gap-12 items-center">
             <h1 class="text-zinc-300"><%= file %></h1>
             <form action="/delete" method="post">
               <input type="text" value="<%= file %>" name="delValue" class="hidden">
