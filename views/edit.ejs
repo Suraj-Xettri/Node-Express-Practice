@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container w-screen h-[70vh] justify-center flex flex-col items-center w-1/4 gap-5 p-8">
+      <div class="bg-white shadow-md rounded-lg w-[400px] p-6">
+        <a href="/" class="text-blue-600"> Go back to Home</a>
+        <div class="form">
+          <form action="/edit" method="post">
+            <div class="mb-4">
+              <label for="taskName" class="block text-gray-700 font-bold mb-2"
+                >Previous Name</label
+              >
+              <input
+                type="text"
+                id="taskName"
+                value = "<%= filename %>"
+                name="prev"
+                class="rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="Update"
+                class="block text-gray-700 font-bold mb-2"
+                >New Name</label
+              >
+              <input
+                id="Update"
+                placeholder="New Name"
+                name="update"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              ></input>
+            </div>
+            <div class="flex items-center justify-between">
+              <button
+                class="bg-yellow-600 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit"
+              >
+                Update Name
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

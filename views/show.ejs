@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container w-screen h-[60vh] flex flex-col justify-center items-center gap-5 p-8">
+      <div class="bg-white shadow-md rounded-lg w-[400px] p-6">
+        <a href="/" class="text-blue-600"> Go back to Home</a>
+        <div class="form">
+          <form action="/create" method="post">
+            <div class="mb-4">
+              <label for="taskName" class="block text-gray-700 font-bold mb-2"></label>
+                <%= filename %>
+              </label>
+            </div>
+            <div class="mb-4">
+              <label
+                for="taskDescription"
+                class="block text-gray-700 font-bold mb-2"
+                ><%= filedata %></label
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

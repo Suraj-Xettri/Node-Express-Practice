@@ -51,10 +51,14 @@
         <% if(file.length > 0){ %>
           <%  file.forEach((file) => { %>
         <div
-          class="card flex flex-col gap-4 border bg-zinc-800 rounded-2xl p-5"
+          class="card flex flex-col gap-4 border min-w-[200px] bg-zinc-800 rounded-2xl p-5"
         >
-          <h1 class="text-zinc-400">I am task and topic</h1>
-          <a href="" class="text-blue-700">Read More</a>
+          <h1 class="text-zinc-300"> <%= file %></h1>
+          <div class="flex w-full justify-between items-center">
+            <a href="/files/<%= file %>" class="text-blue-700">Read More</a>
+            <a href="/edit/<%=  file %>" class="text-yellow-600">Edit</a>
+          </div>
+          
         </div>
 
         <% }) %>
