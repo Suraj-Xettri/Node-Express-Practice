@@ -48,25 +48,26 @@
         </div>
       </div>
       <div class="tasks mt-8 flex gap-4 flex-wrap">
-        <% if(file.length > 0){ %>
-          <%  file.forEach((file) => { %>
+        <% if(file.length > 0){ %> <% file.forEach((file) => { %>
         <div
           class="card flex flex-col gap-4 border min-w-[200px] bg-zinc-800 rounded-2xl p-5"
         >
-          <h1 class="text-zinc-300"> <%= file %></h1>
+          <div class="flex w-full justify-between items-center">
+            <h1 class="text-zinc-300"><%= file %></h1>
+            <form action="/delete" method="post">
+              <input type="text" value="<%= file %>" name="delValue" class="hidden">
+              <button class="border-none text-red-700">Delet</button>
+            </form>
+          </div>
           <div class="flex w-full justify-between items-center">
             <a href="/files/<%= file %>" class="text-blue-700">Read More</a>
             <a href="/edit/<%=  file %>" class="text-yellow-600">Edit</a>
           </div>
-          
         </div>
 
-        <% }) %>
-    <% } else{ %> 
-            <h1>No Tasks available.</h1>
-       <% } %>
-
-        
+        <% }) %> <% } else{ %>
+        <h1>No Tasks available.</h1>
+        <% } %>
       </div>
     </div>
   </body>

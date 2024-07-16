@@ -51,4 +51,12 @@ app.post("/edit", function (req, res) {
     
   })
 
+  app.post("/delete", function (req, res) {
+    
+    fs.rm(`./files/${req.body.delValue}`, function(err){
+      res.redirect("/")
+    })
+    
+  })
+
 app.listen(3000);
